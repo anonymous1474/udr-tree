@@ -4,9 +4,9 @@ implementation of martin kleppmann's highly available tree with move operation
 
 Example: 200 total operations, operations generated every 5ms interval(5000 microsecond), tree size 50
 
-go run main.go -n 3 - p 0 -r 200 -o 5000 -s 50
-go run main.go -n 3 - p 1 -r 200 -o 5000 -s 50
-go run main.go -n 3 - p 2 -r 200 -o 5000 -s 50
+1) go run main.go -n 3 - p 0 -r 200 -o 5000 -s 50
+2) go run main.go -n 3 - p 1 -r 200 -o 5000 -s 50
+3) go run main.go -n 3 - p 2 -r 200 -o 5000 -s 50
 
 after cloning : do ```go get -d``` to get all dependancies
 
