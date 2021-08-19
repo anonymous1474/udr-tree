@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package protos;
+
+message Void {}
+
+message UpdateValue {
+    string key = 1;
+    string value = 2;
+    string prev = 3;
+    int32 clock = 4;
+    int32 ID = 5;
+}
+
+message Verify {
+    repeated string vertices = 1;
+    int32 ID = 2;
+}
+
+service ChatService {
+    rpc Propogate(UpdateValue) returns (Void) {}
+    rpc CheckAnswer(Verify) returns (Void) {}
+}
