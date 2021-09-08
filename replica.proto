@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package protos;
+
+service StreamService {
+    rpc FetchResponse (Request) returns (stream Response) {}
+}
+  
+service ChatService {
+    rpc CheckAnswer(Verify) returns (Void) {}
+}
+
+message Request {
+    int32 id = 1;
+}
+
+message Response {
+    string key = 1;
+    string value = 2;
+    string prev = 3;
+    int32 clock = 4;
+    int32 ID = 5;
+}
+
+message Verify {
+    repeated string vertices = 1;
+    int32 ID = 2;
+}
+
+message Void {}
